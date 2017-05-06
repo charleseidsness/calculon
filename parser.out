@@ -1,0 +1,4150 @@
+ State 0:
+          program ::= * ans
+          ans ::= * expr
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+          ans ::= * diffVar diff RPAREN
+          diffVar ::= * DIFF VARIABLE COMMA
+          diffVar ::= * DIFF COMMA
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                          DIFF shift  96
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  91
+                           ans shift  169
+                       program accept
+                       diffVar shift  36
+
+State 1:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= expr POWER * expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  119
+
+State 2:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= ACOS * diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  81
+
+State 3:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= ASIN * expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  85
+
+State 4:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= ASINH * diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  84
+
+State 5:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= ASIN * diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  87
+
+State 6:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= expr DIVIDE * expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  105
+
+State 7:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= ATANH * diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  88
+
+State 8:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= ATANH * expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  53
+
+State 9:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= ATAN * diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  90
+
+State 10:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= COSH * diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  54
+
+State 11:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= COS * diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  56
+
+State 12:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= ATAN * expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  59
+
+State 13:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= EXP * diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  58
+
+State 14:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= LN * diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  61
+
+State 15:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= LOG * diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  64
+
+State 16:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= COSH * expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  67
+
+State 17:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= SINH * diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  66
+
+State 18:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= SIN * diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  52
+
+State 19:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= LPAREN * expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  82
+
+State 20:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= SQRT * diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  68
+
+State 21:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= COS * expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  71
+
+State 22:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= TAN * diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  70
+
+State 23:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= URAMP * diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  73
+
+State 24:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+          diff ::= U * diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  74
+
+State 25:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= EXP * expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  76
+
+State 26:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= LN * expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  77
+
+State 27:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= LOG * expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  78
+
+State 28:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= SINH * expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  80
+
+State 29:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= SIN * expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  86
+
+State 30:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= SQRT * expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  89
+
+State 31:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= TAN * expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  55
+
+State 32:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= URAMP * expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  60
+
+State 33:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= expr PLUS * expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  92
+
+State 34:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+          expr ::= U * expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  65
+
+State 35:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= ABS * expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  72
+
+State 36:
+          ans ::= diffVar * diff RPAREN
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  69
+
+State 37:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= diff PLUS * diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  93
+
+State 38:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= MINUS * expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  118
+
+State 39:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= ACOSH * expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  83
+
+State 40:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= LPAREN * diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  79
+
+State 41:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= diff MINUS * diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  94
+
+State 42:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= MINUS * diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  145
+
+State 43:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= expr MINUS * expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  95
+
+State 44:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= diff TIMES * diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  107
+
+State 45:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= diff DIVIDE * diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  109
+
+State 46:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= diff POWER * diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  146
+
+State 47:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= ACOS * expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  57
+
+State 48:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= expr TIMES * expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  102
+
+State 49:
+          expr ::= * VARIABLE
+          expr ::= * CONSTANT
+          expr ::= * LPAREN expr RPAREN
+          expr ::= * MINUS expr
+          expr ::= * expr MINUS expr
+          expr ::= * expr PLUS expr
+          expr ::= * expr TIMES expr
+          expr ::= * expr DIVIDE expr
+          expr ::= * expr POWER expr
+          expr ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          expr ::= * VOLTAGE VARIABLE RPAREN
+          expr ::= * CURRENT VARIABLE RPAREN
+          expr ::= * ABS expr RPAREN
+          expr ::= * ACOSH expr RPAREN
+          expr ::= * ACOS expr RPAREN
+          expr ::= * ASINH expr RPAREN
+          expr ::= ASINH * expr RPAREN
+          expr ::= * ASIN expr RPAREN
+          expr ::= * ATANH expr RPAREN
+          expr ::= * ATAN expr RPAREN
+          expr ::= * COSH expr RPAREN
+          expr ::= * COS expr RPAREN
+          expr ::= * EXP expr RPAREN
+          expr ::= * LN expr RPAREN
+          expr ::= * LOG expr RPAREN
+          expr ::= * SINH expr RPAREN
+          expr ::= * SIN expr RPAREN
+          expr ::= * SQRT expr RPAREN
+          expr ::= * TAN expr RPAREN
+          expr ::= * URAMP expr RPAREN
+          expr ::= * U expr RPAREN
+
+                         MINUS shift  38
+                        LPAREN shift  19
+                           ABS shift  35
+                         ACOSH shift  39
+                          ACOS shift  47
+                         ASINH shift  49
+                          ASIN shift  3
+                         ATANH shift  8
+                          ATAN shift  12
+                          COSH shift  16
+                           COS shift  21
+                           EXP shift  25
+                            LN shift  26
+                           LOG shift  27
+                          SINH shift  28
+                           SIN shift  29
+                          SQRT shift  30
+                           TAN shift  31
+                         URAMP shift  32
+                             U shift  34
+                      VARIABLE shift  115
+                      CONSTANT shift  116
+                       VOLTAGE shift  106
+                       CURRENT shift  101
+                          expr shift  63
+
+State 50:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= ABS * diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  75
+
+State 51:
+          diff ::= * VARIABLE
+          diff ::= * CONSTANT
+          diff ::= * LPAREN diff RPAREN
+          diff ::= * MINUS diff
+          diff ::= * diff PLUS diff
+          diff ::= * diff MINUS diff
+          diff ::= * diff TIMES diff
+          diff ::= * diff DIVIDE diff
+          diff ::= * diff POWER diff
+          diff ::= * VOLTAGE VARIABLE COMMA VARIABLE RPAREN
+          diff ::= * VOLTAGE VARIABLE RPAREN
+          diff ::= * CURRENT VARIABLE RPAREN
+          diff ::= * ABS diff RPAREN
+          diff ::= * ACOSH diff RPAREN
+          diff ::= ACOSH * diff RPAREN
+          diff ::= * ACOS diff RPAREN
+          diff ::= * ASINH diff RPAREN
+          diff ::= * ASIN diff RPAREN
+          diff ::= * ATANH diff RPAREN
+          diff ::= * ATAN diff RPAREN
+          diff ::= * COSH diff RPAREN
+          diff ::= * COS diff RPAREN
+          diff ::= * EXP diff RPAREN
+          diff ::= * LN diff RPAREN
+          diff ::= * LOG diff RPAREN
+          diff ::= * SINH diff RPAREN
+          diff ::= * SIN diff RPAREN
+          diff ::= * SQRT diff RPAREN
+          diff ::= * TAN diff RPAREN
+          diff ::= * URAMP diff RPAREN
+          diff ::= * U diff RPAREN
+
+                         MINUS shift  42
+                        LPAREN shift  40
+                           ABS shift  50
+                         ACOSH shift  51
+                          ACOS shift  2
+                         ASINH shift  4
+                          ASIN shift  5
+                         ATANH shift  7
+                          ATAN shift  9
+                          COSH shift  10
+                           COS shift  11
+                           EXP shift  13
+                            LN shift  14
+                           LOG shift  15
+                          SINH shift  17
+                           SIN shift  18
+                          SQRT shift  20
+                           TAN shift  22
+                         URAMP shift  23
+                             U shift  24
+                      VARIABLE shift  142
+                      CONSTANT shift  143
+                       VOLTAGE shift  104
+                       CURRENT shift  111
+                          diff shift  62
+
+State 52:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= SIN diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  163
+
+State 53:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= ATANH expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  128
+
+State 54:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= COSH diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  157
+
+State 55:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= TAN expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  138
+
+State 56:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= COS diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  158
+
+State 57:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= ACOS expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  125
+
+State 58:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= EXP diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  159
+
+State 59:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= ATAN expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  129
+
+State 60:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= URAMP expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  139
+
+State 61:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= LN diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  160
+
+State 62:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= ACOSH diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  151
+
+State 63:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= ASINH expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  126
+
+State 64:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= LOG diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  161
+
+State 65:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= U expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  140
+
+State 66:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= SINH diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  162
+
+State 67:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= COSH expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  130
+
+State 68:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= SQRT diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  164
+
+State 69:
+          ans ::= diffVar diff * RPAREN
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  141
+
+State 70:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= TAN diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  165
+
+State 71:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= COS expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  131
+
+State 72:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= ABS expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  123
+
+State 73:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= URAMP diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  166
+
+State 74:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= U diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  167
+
+State 75:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= ABS diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  150
+
+State 76:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= EXP expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  132
+
+State 77:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= LN expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  133
+
+State 78:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= LOG expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  134
+
+State 79:
+          diff ::= LPAREN diff * RPAREN
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  144
+
+State 80:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= SINH expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  135
+
+State 81:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= ACOS diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  152
+
+State 82:
+          expr ::= LPAREN expr * RPAREN
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  117
+
+State 83:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= ACOSH expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  124
+
+State 84:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= ASINH diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  153
+
+State 85:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= ASIN expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  127
+
+State 86:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= SIN expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  136
+
+State 87:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= ASIN diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  154
+
+State 88:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= ATANH diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  155
+
+State 89:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+          expr ::= SQRT expr * RPAREN
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                        RPAREN shift  137
+
+State 90:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+          diff ::= ATAN diff * RPAREN
+
+                          PLUS shift  37
+                         MINUS shift  41
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                        RPAREN shift  156
+
+State 91:
+      (1) ans ::= expr *
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+
+                          PLUS shift  33
+                         MINUS shift  43
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                     {default} reduce 1
+
+State 92:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+      (7) expr ::= expr PLUS expr *
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                     {default} reduce 7
+
+State 93:
+          diff ::= diff * PLUS diff
+     (39) diff ::= diff PLUS diff *
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                     {default} reduce 39
+
+State 94:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+     (40) diff ::= diff MINUS diff *
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+
+                        DIVIDE shift  45
+                         TIMES shift  44
+                         POWER shift  46
+                     {default} reduce 40
+
+State 95:
+          expr ::= expr * MINUS expr
+      (6) expr ::= expr MINUS expr *
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+
+                        DIVIDE shift  6
+                         TIMES shift  48
+                         POWER shift  1
+                     {default} reduce 6
+
+State 96:
+          diffVar ::= DIFF * VARIABLE COMMA
+          diffVar ::= DIFF * COMMA
+
+                      VARIABLE shift  99
+                         COMMA shift  114
+
+State 97:
+          expr ::= VOLTAGE VARIABLE * COMMA VARIABLE RPAREN
+          expr ::= VOLTAGE VARIABLE * RPAREN
+
+                        RPAREN shift  121
+                         COMMA shift  113
+
+State 98:
+          diff ::= VOLTAGE VARIABLE * COMMA VARIABLE RPAREN
+          diff ::= VOLTAGE VARIABLE * RPAREN
+
+                        RPAREN shift  148
+                         COMMA shift  112
+
+State 99:
+          diffVar ::= DIFF VARIABLE * COMMA
+
+                         COMMA shift  168
+
+State 100:
+          expr ::= VOLTAGE VARIABLE COMMA VARIABLE * RPAREN
+
+                        RPAREN shift  120
+
+State 101:
+          expr ::= CURRENT * VARIABLE RPAREN
+
+                      VARIABLE shift  108
+
+State 102:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+      (8) expr ::= expr TIMES expr *
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+
+                         POWER shift  1
+                     {default} reduce 8
+
+State 103:
+          diff ::= VOLTAGE VARIABLE COMMA VARIABLE * RPAREN
+
+                        RPAREN shift  147
+
+State 104:
+          diff ::= VOLTAGE * VARIABLE COMMA VARIABLE RPAREN
+          diff ::= VOLTAGE * VARIABLE RPAREN
+
+                      VARIABLE shift  98
+
+State 105:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+      (9) expr ::= expr DIVIDE expr *
+          expr ::= expr * POWER expr
+
+                         POWER shift  1
+                     {default} reduce 9
+
+State 106:
+          expr ::= VOLTAGE * VARIABLE COMMA VARIABLE RPAREN
+          expr ::= VOLTAGE * VARIABLE RPAREN
+
+                      VARIABLE shift  97
+
+State 107:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+     (41) diff ::= diff TIMES diff *
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+
+                         POWER shift  46
+                     {default} reduce 41
+
+State 108:
+          expr ::= CURRENT VARIABLE * RPAREN
+
+                        RPAREN shift  122
+
+State 109:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+     (42) diff ::= diff DIVIDE diff *
+          diff ::= diff * POWER diff
+
+                         POWER shift  46
+                     {default} reduce 42
+
+State 110:
+          diff ::= CURRENT VARIABLE * RPAREN
+
+                        RPAREN shift  149
+
+State 111:
+          diff ::= CURRENT * VARIABLE RPAREN
+
+                      VARIABLE shift  110
+
+State 112:
+          diff ::= VOLTAGE VARIABLE COMMA * VARIABLE RPAREN
+
+                      VARIABLE shift  103
+
+State 113:
+          expr ::= VOLTAGE VARIABLE COMMA * VARIABLE RPAREN
+
+                      VARIABLE shift  100
+
+State 114:
+     (34) diffVar ::= DIFF COMMA *
+
+                     {default} reduce 34
+
+State 115:
+      (2) expr ::= VARIABLE *
+
+                     {default} reduce 2
+
+State 116:
+      (3) expr ::= CONSTANT *
+
+                     {default} reduce 3
+
+State 117:
+      (4) expr ::= LPAREN expr RPAREN *
+
+                     {default} reduce 4
+
+State 118:
+      (5) expr ::= MINUS expr *
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+
+                     {default} reduce 5
+
+State 119:
+          expr ::= expr * MINUS expr
+          expr ::= expr * PLUS expr
+          expr ::= expr * TIMES expr
+          expr ::= expr * DIVIDE expr
+          expr ::= expr * POWER expr
+     (10) expr ::= expr POWER expr *
+
+                     {default} reduce 10
+
+State 120:
+     (11) expr ::= VOLTAGE VARIABLE COMMA VARIABLE RPAREN *
+
+                     {default} reduce 11
+
+State 121:
+     (12) expr ::= VOLTAGE VARIABLE RPAREN *
+
+                     {default} reduce 12
+
+State 122:
+     (13) expr ::= CURRENT VARIABLE RPAREN *
+
+                     {default} reduce 13
+
+State 123:
+     (14) expr ::= ABS expr RPAREN *
+
+                     {default} reduce 14
+
+State 124:
+     (15) expr ::= ACOSH expr RPAREN *
+
+                     {default} reduce 15
+
+State 125:
+     (16) expr ::= ACOS expr RPAREN *
+
+                     {default} reduce 16
+
+State 126:
+     (17) expr ::= ASINH expr RPAREN *
+
+                     {default} reduce 17
+
+State 127:
+     (18) expr ::= ASIN expr RPAREN *
+
+                     {default} reduce 18
+
+State 128:
+     (19) expr ::= ATANH expr RPAREN *
+
+                     {default} reduce 19
+
+State 129:
+     (20) expr ::= ATAN expr RPAREN *
+
+                     {default} reduce 20
+
+State 130:
+     (21) expr ::= COSH expr RPAREN *
+
+                     {default} reduce 21
+
+State 131:
+     (22) expr ::= COS expr RPAREN *
+
+                     {default} reduce 22
+
+State 132:
+     (23) expr ::= EXP expr RPAREN *
+
+                     {default} reduce 23
+
+State 133:
+     (24) expr ::= LN expr RPAREN *
+
+                     {default} reduce 24
+
+State 134:
+     (25) expr ::= LOG expr RPAREN *
+
+                     {default} reduce 25
+
+State 135:
+     (26) expr ::= SINH expr RPAREN *
+
+                     {default} reduce 26
+
+State 136:
+     (27) expr ::= SIN expr RPAREN *
+
+                     {default} reduce 27
+
+State 137:
+     (28) expr ::= SQRT expr RPAREN *
+
+                     {default} reduce 28
+
+State 138:
+     (29) expr ::= TAN expr RPAREN *
+
+                     {default} reduce 29
+
+State 139:
+     (30) expr ::= URAMP expr RPAREN *
+
+                     {default} reduce 30
+
+State 140:
+     (31) expr ::= U expr RPAREN *
+
+                     {default} reduce 31
+
+State 141:
+     (32) ans ::= diffVar diff RPAREN *
+
+                     {default} reduce 32
+
+State 142:
+     (35) diff ::= VARIABLE *
+
+                     {default} reduce 35
+
+State 143:
+     (36) diff ::= CONSTANT *
+
+                     {default} reduce 36
+
+State 144:
+     (37) diff ::= LPAREN diff RPAREN *
+
+                     {default} reduce 37
+
+State 145:
+     (38) diff ::= MINUS diff *
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+
+                     {default} reduce 38
+
+State 146:
+          diff ::= diff * PLUS diff
+          diff ::= diff * MINUS diff
+          diff ::= diff * TIMES diff
+          diff ::= diff * DIVIDE diff
+          diff ::= diff * POWER diff
+     (43) diff ::= diff POWER diff *
+
+                     {default} reduce 43
+
+State 147:
+     (44) diff ::= VOLTAGE VARIABLE COMMA VARIABLE RPAREN *
+
+                     {default} reduce 44
+
+State 148:
+     (45) diff ::= VOLTAGE VARIABLE RPAREN *
+
+                     {default} reduce 45
+
+State 149:
+     (46) diff ::= CURRENT VARIABLE RPAREN *
+
+                     {default} reduce 46
+
+State 150:
+     (47) diff ::= ABS diff RPAREN *
+
+                     {default} reduce 47
+
+State 151:
+     (48) diff ::= ACOSH diff RPAREN *
+
+                     {default} reduce 48
+
+State 152:
+     (49) diff ::= ACOS diff RPAREN *
+
+                     {default} reduce 49
+
+State 153:
+     (50) diff ::= ASINH diff RPAREN *
+
+                     {default} reduce 50
+
+State 154:
+     (51) diff ::= ASIN diff RPAREN *
+
+                     {default} reduce 51
+
+State 155:
+     (52) diff ::= ATANH diff RPAREN *
+
+                     {default} reduce 52
+
+State 156:
+     (53) diff ::= ATAN diff RPAREN *
+
+                     {default} reduce 53
+
+State 157:
+     (54) diff ::= COSH diff RPAREN *
+
+                     {default} reduce 54
+
+State 158:
+     (55) diff ::= COS diff RPAREN *
+
+                     {default} reduce 55
+
+State 159:
+     (56) diff ::= EXP diff RPAREN *
+
+                     {default} reduce 56
+
+State 160:
+     (57) diff ::= LN diff RPAREN *
+
+                     {default} reduce 57
+
+State 161:
+     (58) diff ::= LOG diff RPAREN *
+
+                     {default} reduce 58
+
+State 162:
+     (59) diff ::= SINH diff RPAREN *
+
+                     {default} reduce 59
+
+State 163:
+     (60) diff ::= SIN diff RPAREN *
+
+                     {default} reduce 60
+
+State 164:
+     (61) diff ::= SQRT diff RPAREN *
+
+                     {default} reduce 61
+
+State 165:
+     (62) diff ::= TAN diff RPAREN *
+
+                     {default} reduce 62
+
+State 166:
+     (63) diff ::= URAMP diff RPAREN *
+
+                     {default} reduce 63
+
+State 167:
+     (64) diff ::= U diff RPAREN *
+
+                     {default} reduce 64
+
+State 168:
+     (33) diffVar ::= DIFF VARIABLE COMMA *
+
+                     {default} reduce 33
+
+State 169:
+      (0) program ::= ans *
+
+                     {default} reduce 0
+

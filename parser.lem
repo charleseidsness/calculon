@@ -1,0 +1,123 @@
+%include {
+	/* 
+ 	 * Copyright (C) 2005 Cooper Street Innovations Inc.
+ 	 *	Charles Eidsness    <charles@cooper-street.com>
+ 	 *
+ 	 * This program is free software; you can redistribute it and/or
+ 	 * modify it under the terms of the GNU General Public License
+ 	 * as published by the Free Software Foundation; either version 2
+ 	 * of the License, or (at your option) any later version.
+ 	 * 
+ 	 * This program is distributed in the hope that it will be useful,
+ 	 * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ 	 * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ 	 * GNU General Public License for more details.
+ 	 * 
+ 	 * You should have received a copy of the GNU General Public License
+ 	 * along with this program; if not, write to the Free Software
+ 	 * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 
+ 	 * 02110-1301, USA.
+ 	 *
+ 	 */
+	 
+	#include <math.h>
+	#include "log.h"
+	#include "tokenizer.h"
+	#include "parser.h"
+	
+	#define ln(x)	log(x)	/* I'm not sure who named that function but they
+								must have been on crack */
+	
+	typedef struct {
+		double f;	/* value of function */
+		double d;	/* value of derivative */
+	} derivData;
+}
+
+%token_type { token_* }
+%type   expr  { double }
+%type   ans  { double }
+%type   diff  { derivData }
+%token_prefix    TOKEN_
+%extra_argument { parserArg arg }
+%parse_accept	{ Debug("Parsing Complete"); }
+%syntax_error	{ Error("Syntax Error"); *arg.solution = sqrtf(-1.f); }
+%parse_failure	{ Error("Parser is lost..."); *arg.solution = sqrtf(-1.f);}
+%stack_overflow	{ Error("Parser stack overflow"); *arg.solution = sqrtf(-1.f);}
+
+%left PLUS MINUS.
+%left DIVIDE TIMES.
+%left POWER.
+%left NOT.
+%left LPAREN RPAREN DIFF ABS ACOSH ACOS ASINH ASIN ATANH ATAN COSH COS EXP LN LOG SINH SIN SQRT TAN URAMP U.
+
+program ::= ans(A).   { *arg.solution = A; Debug("%e", *arg.solution); }
+
+ans(A) ::= expr(B).  { A = B; }
+
+expr(A) ::= VARIABLE(B). { A = *B->variable; }
+expr(A) ::= CONSTANT(B). { A = B->constant; }
+expr(A) ::= LPAREN expr(B) RPAREN. { A = B; }
+expr(A) ::= MINUS expr(B). [NOT] { A = -1*B; }
+expr(A) ::= expr(B) MINUS expr(C). { A = B - C; }
+expr(A) ::= expr(B) PLUS expr(C). { A = B + C; }
+expr(A) ::= expr(B) TIMES expr(C). { A = B * C; }
+expr(A) ::= expr(B) DIVIDE expr(C). { A = B / C; }
+expr(A) ::= expr(B) POWER expr(C). { A = pow(B,C); }
+expr(A) ::= VOLTAGE VARIABLE(B) COMMA VARIABLE(C) RPAREN. { A = *B->variable - *C->variable; }
+expr(A) ::= VOLTAGE VARIABLE(B) RPAREN. { A = *B->variable; }
+expr(A) ::= CURRENT VARIABLE(B) RPAREN. { A = *B->variable; }
+expr(A) ::= ABS expr(B) RPAREN.	 { A = abs(B); }
+expr(A) ::= ACOSH expr(B) RPAREN. { A = acosh(B); }
+expr(A) ::= ACOS expr(B) RPAREN. { A = acos(B); }
+expr(A) ::= ASINH expr(B) RPAREN. { A = asinh(B); }
+expr(A) ::= ASIN expr(B) RPAREN. { A = asin(B); }
+expr(A) ::= ATANH expr(B) RPAREN. { A = atanh(B); }
+expr(A) ::= ATAN expr(B) RPAREN. { A = atan(B); }
+expr(A) ::= COSH expr(B) RPAREN. { A = cosh(B); }
+expr(A) ::= COS expr(B) RPAREN.	 { A = cos(B); }
+expr(A) ::= EXP expr(B) RPAREN.	 { A = exp(B); }
+expr(A) ::= LN expr(B) RPAREN. { A = ln(B); }
+expr(A) ::= LOG expr(B) RPAREN.	 { A = log10(B); }
+expr(A) ::= SINH expr(B) RPAREN. { A = sinh(B); }
+expr(A) ::= SIN expr(B) RPAREN.	 { A = sin(B); }
+expr(A) ::= SQRT expr(B) RPAREN. { A = sqrt(B); }
+expr(A) ::= TAN expr(B) RPAREN.	 { A = tan(B); }
+expr(A) ::= URAMP expr(B) RPAREN. { A = (B > 0) ? B : 0; }
+expr(A) ::= U expr(B) RPAREN. { A = (B > 0) ? 1 : 0; }
+
+ans(A) ::= diffVar diff(B) RPAREN.  { A = B.d; }
+
+diffVar ::= DIFF VARIABLE(B) COMMA. { *arg.diffVariable = B->variable; }
+diffVar ::= DIFF COMMA.
+diff(A) ::= VARIABLE(B). { A.f = *B->variable; A.d = (*arg.diffVariable == B->variable) ? 1.0 : 0.0; }
+diff(A) ::= CONSTANT(B). { A.f = B->constant; A.d = 0.0; }
+diff(A) ::= LPAREN diff(B) RPAREN. { A.f = B.f; A.d = B.d; }
+diff(A) ::= MINUS diff(B). [NOT] { A.f = -1*B.f; A.d = -1*B.d; }
+diff(A) ::= diff(B) PLUS diff(C). { A.f = B.f + C.f; A.d = B.d + C.d; }
+diff(A) ::= diff(B) MINUS diff(C). { A.f = B.f - C.f; A.d = B.d - C.d; }
+diff(A) ::= diff(B) TIMES diff(C). { A.f = B.f * C.f; A.d = B.d*C.f + B.f*C.d; }
+diff(A) ::= diff(B) DIVIDE diff(C). { A.f = B.f / C.f; A.d = (B.d*C.f - B.f*C.d) / (C.f*C.f); }
+diff(A) ::= diff(B) POWER diff(C). { A.f = pow(B.f,C.f); A.d = pow(B.f,C.f)*(B.d*(C.f/B.f) + C.d*ln(B.f)); }
+diff(A) ::= VOLTAGE VARIABLE(B) COMMA VARIABLE(C) RPAREN. { A.f = *B->variable - *C->variable ; A.d = ((*arg.diffVariable == B->variable) ? 1.0 : 0.0) - ((*arg.diffVariable == C->variable) ? 1.0 : 0.0); }
+diff(A) ::= VOLTAGE VARIABLE(B) RPAREN. { A.f = *B->variable; A.d = (*arg.diffVariable == B->variable) ? 1.0 : 0.0; }
+diff(A) ::= CURRENT VARIABLE(B) RPAREN. { A.f = *B->variable; A.d = (*arg.diffVariable == B->variable) ? 1.0 : 0.0; }
+diff(A) ::= ABS diff(B) RPAREN.	 { A.f = abs(B.f); A.d = (B.f/abs(B.f))*B.d; }
+diff(A) ::= ACOSH diff(B) RPAREN. { A.f = acosh(B.f); A.d = sinh(B.f)*B.d; }
+diff(A) ::= ACOS diff(B) RPAREN. { A.f = acos(B.f); A.d = (-1/(sqrt(1-B.f*B.f)))*B.d; }
+diff(A) ::= ASINH diff(B) RPAREN. { A.f = asinh(B.f); A.d = (1/(sqrt(1+B.f*B.f)))*B.d; }
+diff(A) ::= ASIN diff(B) RPAREN. { A.f = asin(B.f); A.d = (1/(sqrt(1-B.f*B.f)))*B.d; }
+diff(A) ::= ATANH diff(B) RPAREN. { A.f = atanh(B.f); A.d = (1/(1-B.f*B.f))*B.d; }
+diff(A) ::= ATAN diff(B) RPAREN. { A.f = atan(B.f); A.d = (1/(1+B.f*B.f))*B.d; }
+diff(A) ::= COSH diff(B) RPAREN. { A.f = cosh(B.f); A.d = sinh(B.f)*B.d; }
+diff(A) ::= COS diff(B) RPAREN.	 { A.f = cos(B.f); A.d = -1*sin(B.f)*B.d; }
+diff(A) ::= EXP diff(B) RPAREN.	 { A.f = exp(B.f);  A.d = exp(B.f)*B.d; }
+diff(A) ::= LN diff(B) RPAREN. { A.f = ln(B.f); A.d = (1/B.f)*B.d; }
+diff(A) ::= LOG diff(B) RPAREN.	 { A.f = log10(B.f); (1/(B.f*ln(10)))*B.d; }
+diff(A) ::= SINH diff(B) RPAREN. { A.f = sinh(B.f); A.d = cosh(B.f)*B.d; }
+diff(A) ::= SIN diff(B) RPAREN.	 { A.f = sin(B.f); A.d = cos(B.f)*B.d; }
+diff(A) ::= SQRT diff(B) RPAREN. { A.f = sqrt(B.f); A.d = (1/(2*sqrt(B.f)))*B.d; }
+diff(A) ::= TAN diff(B) RPAREN.	 { A.f = tan(B.f); A.d = (1/cos(B.f))*(1/cos(B.f))*B.d; }
+diff(A) ::= URAMP diff(B) RPAREN. { A.f = (B.f > 0) ? B.f : 0; A.d = ((B.f == 0)? 0.5 : ((B.f > 0) ? 1.0 : 0))*B.d; }
+diff(A) ::= U diff(B) RPAREN. { A.f = (B.f > 0) ? 1 : 0; A.d = ((B.f == 0)? 1e+35 : 0.0)*B.d; }
+
